@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>A Little Something</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="hearts"></div>
+
+    <div class="progress">
+
+        <span class="progressDot active"></span>
+
+        <span class="progressDot"></span>
+
+        <span class="progressDot"></span>
+
+        <span class="progressDot"></span>
+
+    </div>
+
+    <button id="soundButton" class="soundButton">
+        🔇 Sound Off
+    </button>
+
+    <div class="card" id="firstCard">
+
+        <div class="emoji">💌</div>
+
+        <h1>Hey.</h1>
+
+        <p>Okay, this might be a little stupid...</p>
+
+        <button id="openButton">
+
+    <span class="normalText">Open it 💗</span>
+
+    <span class="hoverText">✨ Open it 💗 ✨</span>
+
+</button>
+
+    </div>
+
+
+    <div class="card hidden" id="secondCard">
+
+        <div class="emoji">👀</div>
+
+        <h1>Okay...</h1>
+
+        <p>Don't judge me yet.</p>
+
+        <button id="continueButton">
+            Continue →
+        </button>
+
+    </div>
+
+    <div class="card hidden" id="thirdCard">
+
+    <div class="emoji">🌸</div>
+
+    <h1>Before I ask...</h1>
+
+    <p>
+        Okay, seriously for a second...
+        I've been wanting to ask you something.
+    </p>
+
+    <button id="questionButton">
+        Okay ❤️
+    </button>
+
+</div>
+
+<div class="card hidden" id="questionCard">
+
+    <div class="emoji">❤️</div>
+
+    <h1>Okay...</h1>
+
+    <p class="questionText">
+        There's something I've been wanting to ask you.
+    </p>
+
+    <p class="questionMain">
+        Would you like to go out with me sometime?
+    </p>
+
+    <div class="buttons">
+
+    <button id="yesButton" class="yesButton">
+        YES ❤️
+    </button>
+
+    <button id="noButton" class="noButton">
+        No 😭
+    </button>
+
+    </div>
+
+</div>
+
+<div class="card hidden" id="yesCard">
+
+    <div id="celebration"></div>
+
+    <div class="emoji">🎉</div>
+
+    <h1>Wait... really? ❤️</h1>
+
+    <p class="resultText">
+        Wow... I'm actually really happy right now. ❤️
+    </p>
+
+    <p class="resultText">
+        I guess we have something to look forward to. 💗
+    </p>
+
+    <div class="bigHeart">
+        ❤️
+    </div>
+
+</div>
+
+<div class="card hidden" id="noCard">
+
+    <div class="emoji">🌸</div>
+
+    <h1>That's okay ❤️</h1>
+
+    <p class="resultText">
+        Thank you for being honest with me.
+    </p>
+
+    <p class="resultText">
+        I'm still glad I asked.
+    </p>
+
+    <div class="bigHeart">
+        ❤️
+    </div>
+
+</div>
+
+
+<audio id="yesMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
