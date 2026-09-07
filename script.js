@@ -36,6 +36,7 @@ function fadeInMusic() {
 
 }
 
+
 soundButton.addEventListener("click", function() {
 
     if (yesMusic.muted) {
@@ -67,6 +68,12 @@ const secondCard = document.getElementById("secondCard");
 const thirdCard = document.getElementById("thirdCard");
 
 const questionCard = document.getElementById("questionCard");
+
+const secretHeart = document.getElementById("secretHeart");
+
+const secretMessage = document.getElementById("secretMessage");
+
+let secretClicks = 0;
 
 const yesCard = document.getElementById("yesCard");
 
@@ -118,6 +125,16 @@ questionButton.addEventListener("click", function() {
 
     updateProgress(3);
 
+    startHearts();
+
+    setTimeout(function() {
+
+        document
+            .querySelector(".finalQuestion")
+            .classList.add("show");
+
+    }, 3000);
+
 });
 
 yesButton.addEventListener("click", function() {
@@ -139,10 +156,10 @@ yesButton.addEventListener("click", function() {
 let noClicks = 0;
 
 const noMessages = [
-    "Are you sure? 🥺",
-    "Really? 😭",
+    "Are you sure?",
+    "Really?",
     "Think about it...",
-    "Come onnn 😭",
+    "Come onnn",
     "Okay, that's fair ❤️"
 ];
 
@@ -198,7 +215,39 @@ function createHeart() {
 }
 
 
-setInterval(createHeart, 700);
+let heartsStarted = false;
+
+let heartInterval;
+
+function startHearts() {
+
+    if (heartsStarted) return;
+
+    heartsStarted = true;
+
+    heartInterval = setInterval(createHeart, 700);
+
+}
+
+secretHeart.addEventListener("click", function() {
+
+    secretClicks++;
+
+    if (secretClicks === 5) {
+
+        secretMessage.classList.add("show");
+
+        setTimeout(function() {
+
+            secretMessage.classList.remove("show");
+
+        }, 2500);
+
+        secretClicks = 0;
+
+    }
+
+});
 
 function celebrate() {
 
